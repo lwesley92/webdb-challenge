@@ -1,0 +1,25 @@
+{
+  "name": "webdb-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Back-End Week2 Day4 Project", 
+  "repository": "https://github.com/lwesley92/webdb-challenge.git",
+  "author": "Latwan Wesley <wesleylatwan22@gmail.com>",
+  "scripts": { 
+    "start": "node index.js", 
+    "server": "nodemon"
+  },
+ 
+ 
+ 
+ 
+  "dependencies": {
+    "express": "^4.16.4",
+    "helmet": "^3.16.0", 
+    "knex": "^0.16.5",
+    "sqlite": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
