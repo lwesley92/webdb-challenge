@@ -1,22 +1,22 @@
-const express = require('express'); 
-const helmet = require('helmet'); 
-const server = express(); 
+const express = require('express');
+const helmet = require('helmet');
+const server = express();
 
-// Import Routers 
-const dishesRouter = require('./dishes/dishes-router.js'); 
-const recipesRouter = require('./recipes/recipes-router.js'); 
+// Import Routers
+const projectsRouter = require('./projects/projects-router.js');
+const actionsRouter = require('./actions/actions-router.js');
 
-// Config Middleware 
-server.use(helmet()); 
-server.use(express.json()); 
+// Configure Middleware
+server.use(helmet());
+server.use(express.json());
 
-// Use Routers 
-server.use('/api/dishes', dishesRouter); 
-server.use('/api/recipes', recipesRouter); 
+// Use Routers
+server.use('/api/projects', projectsRouter);
+server.use('/api/actions', actionsRouter);
 
-// Server Test. Hello Msg. 
-server.get('/', (req, res) => { 
-    res.send({ message: 'Hello from Patty. Be Week2-Day4 Project'})
-}); 
+// Hello. Server Test.
+server.get('/', (req, res) => {
+    res.send({ message: 'Hello from Patty. BE Week2 Sprint Challenge'})
+});
 
-module.exports = server; 
+module.exports = server;
